@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConcesionarioHerramientas.Models
 {
-    internal class Ventas
+    public class Ventas
     {
         [Key]
         public int VentaId { get; set; }

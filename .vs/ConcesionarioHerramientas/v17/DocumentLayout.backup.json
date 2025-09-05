@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\models\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\models\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\models\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +21,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\models\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\models\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\views\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|c:\\users\\felis\\onedrive\\escritorio\\proyectos\\concesionarioherramientas\\concesionarioherramientas\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{088A3A31-0A48-48A1-82FB-E79FC15765F4}|ConcesionarioHerramientas\\ConcesionarioHerramientas.csproj|solutionrelative:concesionarioherramientas\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +54,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "Marcas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Marcas.cs",
+              "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Views\\Marcas.cs",
+              "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Marcas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ConcesionarioHerramientas\\Views\\Marcas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T18:42:38.724Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "ConcesionarioHerramientas\\Controllers\\MenuController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T18:40:04.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Menu.Designer.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Menu.Designer.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Views\\Menu.Designer.cs",
@@ -59,20 +92,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Menu.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Views\\Menu.cs",
               "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Menu.cs",
               "RelativeToolTip": "ConcesionarioHerramientas\\Views\\Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAMwCcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T01:57:58.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Menu.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Views\\Menu.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Views\\Menu.cs",
@@ -84,52 +117,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Ventas.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Ventas.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Models\\Ventas.cs",
               "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Ventas.cs",
               "RelativeToolTip": "ConcesionarioHerramientas\\Models\\Ventas.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T19:32:30.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Clientes.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Clientes.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Models\\Clientes.cs",
               "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Clientes.cs",
               "RelativeToolTip": "ConcesionarioHerramientas\\Models\\Clientes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T19:31:34.49Z"
+              "WhenOpened": "2025-09-04T19:31:34.49Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Automoviles.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Automoviles.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Models\\Automoviles.cs",
               "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Automoviles.cs",
               "RelativeToolTip": "ConcesionarioHerramientas\\Models\\Automoviles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T19:30:59.107Z"
+              "WhenOpened": "2025-09-04T19:30:59.107Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Marcas.cs",
               "DocumentMoniker": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Marcas.cs",
               "RelativeDocumentMoniker": "ConcesionarioHerramientas\\Models\\Marcas.cs",
               "ToolTip": "C:\\Users\\felis\\OneDrive\\Escritorio\\Proyectos\\ConcesionarioHerramientas\\ConcesionarioHerramientas\\Models\\Marcas.cs",
               "RelativeToolTip": "ConcesionarioHerramientas\\Models\\Marcas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T19:26:07.285Z"
+              "WhenOpened": "2025-09-04T19:26:07.285Z",
+              "EditorCaption": ""
             }
           ]
         }

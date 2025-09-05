@@ -1,8 +1,10 @@
+using ConcesionarioHerramientas.Controllers;
+
 namespace ConcesionarioHerramientas
 {
-    public partial class Menu : Form
+    public partial class frmMenu : Form
     {
-        public Menu()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -27,11 +29,15 @@ namespace ConcesionarioHerramientas
         private void btnVerMarcas_Click(object sender, EventArgs e)
         {
             btnVerMarcas.BackColor = Color.RoyalBlue;
+            var controller = new MenuController();
+            controller.AbrirFormularioMarcas(this);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             btnSalir.BackColor = Color.DarkRed;
+            var controller = new MenuController();
+            controller.CerrarFormularioMenu(this );
         }
 
       

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConcesionarioHerramientas.Models
 {
-    internal class Marcas
+    public class Marcas
     {
         [Key]
         public int IdMarca { get; set; }
