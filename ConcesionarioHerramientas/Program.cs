@@ -1,3 +1,9 @@
+using ConcesionarioHerramientas.Models;
+using ConcesionarioHerramientas.Views;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+
 namespace ConcesionarioHerramientas
 {
     internal static class Program
@@ -8,9 +14,19 @@ namespace ConcesionarioHerramientas
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+
+            var services = new ServiceCollection();
+
+
+            services.AddDbContext<ConexionDB>(options =>
+               options.UseSqlServer("Server=FELIPE\\SQLEXPRESS;Database=PracticaConcesionarioDB;Trusted_Connection=True;TrustServerCertificate=True;"));
+
+            var serviceProvider = services.BuildServiceProvider();
+
             ApplicationConfiguration.Initialize();
+
+            var dbContext = serviceProvider.GetRequiredService<ConexionDB>();
+
             Application.Run(new frmMenu());
         }
     }

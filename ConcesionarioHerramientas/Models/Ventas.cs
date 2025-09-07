@@ -11,7 +11,7 @@ namespace ConcesionarioHerramientas.Models
     public class Ventas
     {
         [Key]
-        public int VentaId { get; set; }
+        public int IdVenta { get; set; }
         public DateTime Fecha { get; set; }
         public decimal Total { get; set; }
         public int IdAutomovil { get; set; }
