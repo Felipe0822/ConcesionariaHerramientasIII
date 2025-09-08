@@ -1,6 +1,6 @@
 ﻿namespace ConcesionarioHerramientas.Views
 {
-    partial class frmMarcas
+    partial class frmMazda
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnMazda = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // btnMazda
+            // dataGridView1
             // 
-            btnMazda.Location = new Point(84, 102);
-            btnMazda.Name = "btnMazda";
-            btnMazda.Size = new Size(94, 29);
-            btnMazda.TabIndex = 0;
-            btnMazda.Text = "Mazda";
-            btnMazda.UseVisualStyleBackColor = true;
-            btnMazda.Click += btnMazda_Click;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Cursor = Cursors.IBeam;
+            dataGridView1.Location = new Point(233, 99);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(300, 188);
+            dataGridView1.TabIndex = 0;
             // 
-            // frmMarcas
+            // frmMazda
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnMazda);
-            Name = "frmMarcas";
-            Text = "Marcas";
+            Controls.Add(dataGridView1);
+            Name = "frmMazda";
+            Text = "frmMazda";
+            Load += frmMazda_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnMazda;
+        public DataGridView dataGridView1;
     }
 }

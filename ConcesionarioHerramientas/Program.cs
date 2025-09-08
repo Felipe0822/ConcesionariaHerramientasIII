@@ -19,7 +19,7 @@ namespace ConcesionarioHerramientas
 
 
             services.AddDbContext<ConexionDB>(options =>
-               options.UseSqlServer("Server=FELIPE\\SQLEXPRESS;Database=PracticaConcesionarioDB;Trusted_Connection=True;TrustServerCertificate=True;"));
+               options.UseSqlServer("Server=FELIPE\\SQLEXPRESS;Database=ConcesionarioDB;Trusted_Connection=True;TrustServerCertificate=True;"));
 
             var serviceProvider = services.BuildServiceProvider();
 

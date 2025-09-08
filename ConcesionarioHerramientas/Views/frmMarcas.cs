@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConcesionarioHerramientas.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace ConcesionarioHerramientas.Views
 {
     public partial class frmMarcas : Form
     {
+
         public frmMarcas()
         {
             InitializeComponent();
+        }
+
+        private void btnMazda_Click(object sender, EventArgs e)
+        {
+            var controllerMarcas = new MarcasController();
+            controllerMarcas.VerMazda(this);
         }
     }
 }

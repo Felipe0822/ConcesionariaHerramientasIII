@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConcesionarioHerramientas.Views;
+using ConcesionarioHerramientas.Models;
 
 namespace ConcesionarioHerramientas.Controllers
 {

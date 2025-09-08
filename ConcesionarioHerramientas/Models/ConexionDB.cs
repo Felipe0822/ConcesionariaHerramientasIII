@@ -10,7 +10,13 @@ namespace ConcesionarioHerramientas.Models
 {
     internal class ConexionDB : DbContext
     {
+        public ConexionDB()
+        {
+        }
 
+        public ConexionDB(DbContextOptions<ConexionDB> options) : base(options)
+        {
+        }
         public DbSet<Clientes> Cliente { get; set; }
         public DbSet<Automoviles> Automovil { get; set; }
         public DbSet<Ventas> Venta { get; set; }
