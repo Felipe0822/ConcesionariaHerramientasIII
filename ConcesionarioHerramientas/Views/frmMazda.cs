@@ -28,6 +28,34 @@ namespace ConcesionarioHerramientas.Views
         {
             var controller = new MarcasController();
             controller.CargarAutosPorMarca(this, 1);
+
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            // Fondo
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.GridColor = Color.LightGray;
+
+            // Cabecera
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Filas
+            dataGridView1.DefaultCellStyle.BackColor = Color.White;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // Filas alternadas
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+            // Ajuste columnas
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.RowHeadersVisible = false;
         }
     }
 }

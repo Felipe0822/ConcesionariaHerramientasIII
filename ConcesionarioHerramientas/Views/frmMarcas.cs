@@ -19,10 +19,29 @@ namespace ConcesionarioHerramientas.Views
             InitializeComponent();
         }
 
+      
+
+        private void frmMarcas_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.WhiteSmoke;
+            label1.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            label1.ForeColor = Color.Black;
+
+            btnMazda.BackColor = Color.DarkMagenta;
+            btnMazda.ForeColor = Color.White;
+            btnMazda.FlatStyle = FlatStyle.Flat;
+            btnMazda.FlatAppearance.BorderSize = 0;
+        }
+
+
         private void btnMazda_Click(object sender, EventArgs e)
         {
+            btnMazda.BackColor = Color.RoyalBlue;
+
             var controllerMarcas = new MarcasController();
             controllerMarcas.VerMazda(this);
+
+
         }
     }
 }
