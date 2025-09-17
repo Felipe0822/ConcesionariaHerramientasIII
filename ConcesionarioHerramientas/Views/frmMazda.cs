@@ -19,11 +19,6 @@ namespace ConcesionarioHerramientas.Views
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void frmMazda_Load(object sender, EventArgs e)
         {
             var controller = new MarcasController();
@@ -56,6 +51,21 @@ namespace ConcesionarioHerramientas.Views
             // Ajuste columnas
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.RowHeadersVisible = false;
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string marca = dataGridView1.Rows[e.RowIndex].Cells["Marca"].Value.ToString();
+                string modelo = dataGridView1.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
+                double precio = Convert.ToDouble(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
+                int idAutomovil = 1; // ← aquí deberías tomar el ID real de la fila
+
+                var controller = new VentasController();
+                controller.SeleccionarAutomovil(this, marca, modelo, precio, idAutomovil);
+            }
         }
     }
 }

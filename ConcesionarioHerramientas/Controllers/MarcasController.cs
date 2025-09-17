@@ -33,7 +33,7 @@ namespace ConcesionarioHerramientas.Controllers
                     .Where(a => a.IdMarca == idMarca)
                     .Select(a => new
                     {
-                        Marca = a.Marca.NombreMarca,      // 🔥 mostrar el nombre de la marca
+                        Marca = a.Marca.NombreMarca,
                         Modelo = a.Modelo,
                         Precio = a.Precio
                     })

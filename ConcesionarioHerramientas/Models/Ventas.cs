@@ -10,6 +10,8 @@ namespace ConcesionarioHerramientas.Models
 {
     public class Ventas
     {
+      
+
         [Key]
         public int IdVenta { get; set; }
         public DateTime Fecha { get; set; }
@@ -21,4 +23,6 @@ namespace ConcesionarioHerramientas.Models
         [ForeignKey("IdAutomovil")]
         public Automoviles Automovil { get; set; }
     }
+
+        
 }
