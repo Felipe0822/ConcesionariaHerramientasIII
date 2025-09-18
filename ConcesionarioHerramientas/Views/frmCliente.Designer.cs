@@ -115,6 +115,7 @@
             Controls.Add(txtNombre);
             Name = "frmCliente";
             Text = "frmCliente";
+            Load += frmCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }

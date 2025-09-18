@@ -63,9 +63,14 @@ namespace ConcesionarioHerramientas.Views
                 double precio = Convert.ToDouble(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
                 int idAutomovil = 1; // ← aquí deberías tomar el ID real de la fila
 
-                var controller = new VentasController();
+                var controller = new ClientesController();
                 controller.SeleccionarAutomovil(this, marca, modelo, precio, idAutomovil);
             }
+        }
+
+        private void btoComnprar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

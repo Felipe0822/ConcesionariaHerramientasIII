@@ -1,4 +1,5 @@
 ﻿using ConcesionarioHerramientas.Controllers;
+using ConcesionarioHerramientas.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,30 +14,29 @@ namespace ConcesionarioHerramientas.Views
 {
     public partial class frmVenta : Form
     {
-        private VentasController ventasController;
-        private string nombre;
-        private string cedula;
-        private string direccion;
-        private string marca;
-        private string modelo;
-        private double precio;
-        private int idAutomovil;
 
+        private int _idAutomovil;
         public frmVenta(int idAutomovil)
         {
             InitializeComponent();
+            _idAutomovil = idAutomovil;
+
         }
 
-        public frmVenta(VentasController ventasController, string nombre, string cedula, string direccion, string marca, string modelo, double precio, int idAutomovil)
+
+        private void frmVenta_Load(object sender, EventArgs e)
         {
-            this.ventasController = ventasController;
-            this.nombre = nombre;
-            this.cedula = cedula;
-            this.direccion = direccion;
-            this.marca = marca;
-            this.modelo = modelo;
-            this.precio = precio;
-            this.idAutomovil = idAutomovil;
+            using (var context = new ConexionDB())
+            {
+                var auto = context.Automovil.FirstOrDefault(a => a.IdAutomovil == _idAutomovil);
+
+                if (auto != null)
+                {
+                    label4.Text = auto.Modelo;
+                }
+            }
         }
+
+        
     }
 }
