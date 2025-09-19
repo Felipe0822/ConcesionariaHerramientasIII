@@ -70,5 +70,10 @@ namespace ConcesionarioHerramientas.Views
 
           
         }
+
+        private void btoComnprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

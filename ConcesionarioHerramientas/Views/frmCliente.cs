@@ -39,12 +39,23 @@ namespace ConcesionarioHerramientas.Views
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
             string cedula = txtCedula.Text;
             string direccion = txtDireccion.Text;
+<<<<<<< HEAD
             
+=======
+            string telefono = txtTelefono.Text;
+            string email = txtEmail.Text;
+>>>>>>> 65bf618b626043bd840192bdb595c12f9a4d9be8
 
-            _controller.RegistrarCliente(nombre, cedula, direccion, Marca, Modelo, Precio, IdAutomovil);
+            _controller.RegistrarCliente(this,nombre, cedula, direccion, Marca, Modelo, Precio, IdAutomovil,email,apellido,telefono);
             this.Close();
+        }
+
+        private void frmCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

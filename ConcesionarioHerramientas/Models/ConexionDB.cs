@@ -26,7 +26,7 @@ namespace ConcesionarioHerramientas.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=FELIPE\\SQLEXPRESS;Database=ConcesionarioDB;Trusted_Connection=True;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ConcesionarioDB;Trusted_Connection=True;TrustServerCertificate=True;");
             }
         }   
         protected override void OnModelCreating(ModelBuilder modelBuilder)
