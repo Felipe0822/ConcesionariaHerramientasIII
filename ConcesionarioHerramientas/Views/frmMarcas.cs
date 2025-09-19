@@ -19,7 +19,7 @@ namespace ConcesionarioHerramientas.Views
             InitializeComponent();
         }
 
-      
+
 
         private void frmMarcas_Load(object sender, EventArgs e)
         {
@@ -42,6 +42,12 @@ namespace ConcesionarioHerramientas.Views
             controllerMarcas.VerMazda(this);
 
 
+        }
+
+        private void btoPorche_Click(object sender, EventArgs e)
+        {
+            var controllerMarcas = new MarcasController();
+            controllerMarcas.VerPorche(this);
         }
     }
 }

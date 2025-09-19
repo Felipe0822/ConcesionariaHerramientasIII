@@ -31,6 +31,7 @@
             btnMazda = new Button();
             label1 = new Label();
             label2 = new Label();
+            btoPorche = new Button();
             SuspendLayout();
             // 
             // btnMazda
@@ -64,11 +65,22 @@
             label2.Text = "Seleccione la marca deseada";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
+            // btoPorche
+            // 
+            btoPorche.Location = new Point(332, 200);
+            btoPorche.Name = "btoPorche";
+            btoPorche.Size = new Size(106, 34);
+            btoPorche.TabIndex = 4;
+            btoPorche.Text = "Porche";
+            btoPorche.UseVisualStyleBackColor = true;
+            btoPorche.Click += btoPorche_Click;
+            // 
             // frmMarcas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btoPorche);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnMazda);
@@ -84,5 +96,6 @@
         private Button btnMazda;
         private Label label1;
         private Label label2;
+        private Button btoPorche;
     }
 }

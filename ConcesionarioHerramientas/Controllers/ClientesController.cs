@@ -12,7 +12,7 @@ namespace ConcesionarioHerramientas.Controllers
     {
 
 
-        public void SeleccionarAutomovil(frmMazda frm, string marca, string modelo, double precio, int idAutomovil)
+        public void SeleccionarAutomovil(Form frm, string marca, string modelo, double precio, int idAutomovil)
         {
             // Abre el formulario de cliente
             frm.Hide();

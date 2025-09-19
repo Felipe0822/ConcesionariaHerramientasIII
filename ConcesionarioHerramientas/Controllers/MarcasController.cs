@@ -24,7 +24,16 @@ namespace ConcesionarioHerramientas.Controllers
             frmMazda.ShowDialog();
             frm.Show();
         }
-        public void CargarAutosPorMarca(frmMazda frm, int idMarca)
+
+        public void VerPorche(frmMarcas frp)
+        {
+            frp.Hide();
+            frmPorche frmPorche = new frmPorche();
+            frmPorche.ShowDialog();
+            frp.Show();
+        }
+    
+        public void CargarAutosPorMarca(Form frm, int idMarca)
         {
             using (var context = new ConexionDB())
             {
@@ -39,13 +48,23 @@ namespace ConcesionarioHerramientas.Controllers
                     })
                     .ToList();
 
-                frm.dataGridView1.AutoGenerateColumns = true;
-                frm.dataGridView1.DataSource = lista;
+                var grid = frm.Controls.OfType<DataGridView>().FirstOrDefault();
+                if (grid != null) 
+                {
+                    grid.AutoGenerateColumns = true;
+                    grid.DataSource = lista;
+                    grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                frm.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    // Ocultar la columna del ID si no quieres mostrarla
+                    if (grid.Columns["IdAutomovil"] != null)
+                        grid.Columns["IdAutomovil"].Visible = false;
+                }
+
+
             }
         }
 
+        
     }
 
 }
