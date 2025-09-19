@@ -18,14 +18,14 @@ namespace ConcesionarioHerramientas.Views
             InitializeComponent();
         }
 
-        private VentasController _controller;
+        private ClientesController _controller;
         private string Marca;
         private string Modelo;
         private double Precio;
         private int IdAutomovil;
 
         // 🔹 Constructor personalizado
-        public frmCliente(VentasController controller, string marca, string modelo, double precio, int idAutomovil)
+        public frmCliente(ClientesController controller, string marca, string modelo, double precio, int idAutomovil)
         {
             InitializeComponent();
 
@@ -40,7 +40,8 @@ namespace ConcesionarioHerramientas.Views
         {
             string nombre = txtNombre.Text;
             string cedula = txtCedula.Text;
-            string direccion = txtCedula.Text;
+            string direccion = txtDireccion.Text;
+            
 
             _controller.RegistrarCliente(nombre, cedula, direccion, Marca, Modelo, Precio, IdAutomovil);
             this.Close();

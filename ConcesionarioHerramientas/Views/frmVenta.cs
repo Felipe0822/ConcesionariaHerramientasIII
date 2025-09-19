@@ -13,7 +13,7 @@ namespace ConcesionarioHerramientas.Views
 {
     public partial class frmVenta : Form
     {
-        private VentasController ventasController;
+        private ClientesController clientesController;
         private string nombre;
         private string cedula;
         private string direccion;
@@ -27,9 +27,9 @@ namespace ConcesionarioHerramientas.Views
             InitializeComponent();
         }
 
-        public frmVenta(VentasController ventasController, string nombre, string cedula, string direccion, string marca, string modelo, double precio, int idAutomovil)
+        public frmVenta(ClientesController clientesController, string nombre, string cedula, string direccion, string marca, string modelo, double precio, int idAutomovil)
         {
-            this.ventasController = ventasController;
+            this.clientesController = clientesController;
             this.nombre = nombre;
             this.cedula = cedula;
             this.direccion = direccion;
