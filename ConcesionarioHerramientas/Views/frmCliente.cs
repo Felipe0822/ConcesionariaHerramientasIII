@@ -103,7 +103,10 @@ namespace ConcesionarioHerramientas.Views
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-
+            btnSalir.BackColor = Color.Firebrick;
+            btnSalir.ForeColor = Color.White;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.FlatAppearance.BorderSize = 0;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -31,13 +31,29 @@ namespace ConcesionarioHerramientas.Views
             btnMazda.ForeColor = Color.White;
             btnMazda.FlatStyle = FlatStyle.Flat;
             btnMazda.FlatAppearance.BorderSize = 0;
+            btoPorche.BackColor = Color.DarkMagenta;
+            btoPorche.ForeColor = Color.White;
+            btoPorche.FlatStyle = FlatStyle.Flat;
+            btoPorche.FlatAppearance.BorderSize = 0;
+            btnChevrolet.BackColor = Color.DarkMagenta;
+            btnChevrolet.ForeColor = Color.White;
+            btnChevrolet.FlatStyle = FlatStyle.Flat;
+            btnChevrolet.FlatAppearance.BorderSize = 0;
+            btnRenault.BackColor = Color.DarkMagenta;
+            btnRenault.ForeColor = Color.White;
+            btnRenault.FlatStyle = FlatStyle.Flat;
+            btnRenault.FlatAppearance.BorderSize = 0;
+            btnSalir.BackColor = Color.Firebrick;
+            btnSalir.ForeColor = Color.White;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.FlatAppearance.BorderSize = 0;
+
         }
 
 
         private void btnMazda_Click(object sender, EventArgs e)
         {
             btnMazda.BackColor = Color.RoyalBlue;
-
             var controllerMarcas = new MarcasController();
             controllerMarcas.VerMazda(this);
 
@@ -46,18 +62,21 @@ namespace ConcesionarioHerramientas.Views
 
         private void btoPorche_Click(object sender, EventArgs e)
         {
+            btnMazda.BackColor = Color.RoyalBlue;
             var controllerMarcas = new MarcasController();
             controllerMarcas.VerPorsche(this);
         }
 
         private void btnChevrolet_Click(object sender, EventArgs e)
         {
+            btnMazda.BackColor = Color.RoyalBlue;
             var controller = new MarcasController();
             controller.VerChevrolet(this);
         }
 
         private void btnRenault_Click(object sender, EventArgs e)
         {
+            btnMazda.BackColor = Color.RoyalBlue;
             var controller = new MarcasController();
             controller.VerRenault(this);
         }
