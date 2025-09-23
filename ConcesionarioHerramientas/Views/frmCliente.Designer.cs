@@ -35,6 +35,8 @@
             txtTelefono = new TextBox();
             txtEmail = new TextBox();
             btnContinuar = new Button();
+            lblAuto = new Label();
+            btnSalir = new Button();
             SuspendLayout();
             // 
             // txtNombre
@@ -93,7 +95,7 @@
             // 
             // btnContinuar
             // 
-            btnContinuar.Location = new Point(341, 380);
+            btnContinuar.Location = new Point(288, 380);
             btnContinuar.Name = "btnContinuar";
             btnContinuar.Size = new Size(94, 29);
             btnContinuar.TabIndex = 6;
@@ -101,11 +103,32 @@
             btnContinuar.UseVisualStyleBackColor = true;
             btnContinuar.Click += btnContinuar_Click;
             // 
+            // lblAuto
+            // 
+            lblAuto.AutoSize = true;
+            lblAuto.Location = new Point(627, 220);
+            lblAuto.Name = "lblAuto";
+            lblAuto.Size = new Size(50, 20);
+            lblAuto.TabIndex = 7;
+            lblAuto.Text = "label1";
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(404, 380);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(94, 29);
+            btnSalir.TabIndex = 8;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // frmCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSalir);
+            Controls.Add(lblAuto);
             Controls.Add(btnContinuar);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefono);
@@ -129,5 +152,7 @@
         private TextBox txtTelefono;
         private TextBox txtEmail;
         private Button btnContinuar;
+        private Label lblAuto;
+        private Button btnSalir;
     }
 }

@@ -32,6 +32,9 @@
             label1 = new Label();
             label2 = new Label();
             btoPorche = new Button();
+            btnChevrolet = new Button();
+            btnRenault = new Button();
+            btnSalir = new Button();
             SuspendLayout();
             // 
             // btnMazda
@@ -71,15 +74,48 @@
             btoPorche.Name = "btoPorche";
             btoPorche.Size = new Size(106, 34);
             btoPorche.TabIndex = 4;
-            btoPorche.Text = "Porche";
+            btoPorche.Text = "Porsche";
             btoPorche.UseVisualStyleBackColor = true;
             btoPorche.Click += btoPorche_Click;
+            // 
+            // btnChevrolet
+            // 
+            btnChevrolet.Location = new Point(332, 268);
+            btnChevrolet.Name = "btnChevrolet";
+            btnChevrolet.Size = new Size(106, 34);
+            btnChevrolet.TabIndex = 5;
+            btnChevrolet.Text = "Chevrolet";
+            btnChevrolet.UseVisualStyleBackColor = true;
+            btnChevrolet.Click += btnChevrolet_Click;
+            // 
+            // btnRenault
+            // 
+            btnRenault.Location = new Point(332, 342);
+            btnRenault.Name = "btnRenault";
+            btnRenault.Size = new Size(106, 34);
+            btnRenault.TabIndex = 6;
+            btnRenault.Text = "Renault";
+            btnRenault.UseVisualStyleBackColor = true;
+            btnRenault.Click += btnRenault_Click;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(518, 222);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(123, 34);
+            btnSalir.TabIndex = 7;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // frmMarcas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSalir);
+            Controls.Add(btnRenault);
+            Controls.Add(btnChevrolet);
             Controls.Add(btoPorche);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -97,5 +133,8 @@
         private Label label1;
         private Label label2;
         private Button btoPorche;
+        private Button btnChevrolet;
+        private Button btnRenault;
+        private Button btnSalir;
     }
 }

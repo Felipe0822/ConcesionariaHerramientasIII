@@ -1,6 +1,6 @@
-﻿namespace ConcesionarioHerramientas
+﻿namespace ConcesionarioHerramientas.Views
 {
-    partial class frmPorche
+    partial class frmRenault
     {
         /// <summary>
         /// Required designer variable.
@@ -29,28 +29,40 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(216, 105);
+            dataGridView1.Location = new Point(236, 140);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(300, 188);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // frmPorche
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(326, 362);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(123, 34);
+            btnSalir.TabIndex = 8;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
+            // frmRenault
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
-            Name = "frmPorche";
-            Text = "frmPorche";
-            Load += frmPorche_Load;
+            Name = "frmRenault";
+            Text = "frmRenault";
+            Load += frmRenault_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -58,5 +70,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button btnSalir;
     }
 }

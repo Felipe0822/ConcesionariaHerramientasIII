@@ -12,7 +12,7 @@ namespace ConcesionarioHerramientas.Controllers
     {
 
 
-        public void SeleccionarAutomovil(Form frm, string marca, string modelo, double precio, int idAutomovil)
+        public void SeleccionarAutomovil(Form frm, string marca, string modelo, decimal precio, int idAutomovil)
         {
             // Abre el formulario de cliente
             frm.Hide();
@@ -21,32 +21,59 @@ namespace ConcesionarioHerramientas.Controllers
             frm.Show();
         }
 
-        public void RegistrarCliente(frmCliente frmCliente,string nombre, string cedula, string direccion,
-                                     string marca, string modelo, double precio, int idAutomovil,string apellido,string email,string telefono)
+        public void RegistrarCliente(string nombre, string cedula, string direccion,
+                               string marca, string modelo, decimal precio, int idAutomovil,
+                               string email, string apellido, string telefono,int idCliente)
         {
-            // Abre el formulario de confirmación de venta
-            frmCliente.Hide();
-            frmVenta frm = new frmVenta(idAutomovil);
-            frm.ShowDialog();
-            frmCliente.Show();
-            using (var db = new ConexionDB())
+            try
             {
-                // 1. Registrar cliente
-                var cliente = new Clientes
+                using (var db = new ConexionDB())
                 {
-                    Nombre = nombre,
-                    Apellido = apellido,
-                    Cedula = cedula,
-                    Direccion = direccion,
-                    Email = email,
-                    Telefono = telefono
-                };  
-                db.Cliente.Add(cliente);
-                db.SaveChanges();
-            }
+                    // 1. Registrar cliente
+                    var cliente = new Clientes
+                    {
+                        Nombre = nombre,
+                        Apellido = apellido,
+                        Cedula = cedula,
+                        Direccion = direccion,
+                        Email = email,
+                        Telefono = telefono
+                    };
 
+                    db.Cliente.Add(cliente);
+                    db.SaveChanges();
+
+                    idCliente = cliente.IdCliente; // EF devuelve el identity asignado
+
+                    MessageBox.Show("Cliente guardado con Id: " + idCliente);
+
+                    // 2. Registrar la venta asociada al cliente y automovil
+                    var venta = new Ventas
+                    {
+                        Fecha = DateTime.Now,
+                        Total = precio,
+                        IdCliente = idCliente,       // FK Cliente
+                        IdAutomovil = idAutomovil    // FK Automóvil
+                    };
+
+                    db.Venta.Add(venta);
+                    db.SaveChanges();
+
+                    MessageBox.Show("Venta registrada exitosamente");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error en RegistrarCliente: {ex.Message}");
+            }
         }
 
-        
+        public void CerrarFormularioCliente(frmCliente frm)
+        {
+            frm.Close();
+            
+        }
+
+
     }
 }

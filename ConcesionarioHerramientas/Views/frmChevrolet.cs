@@ -9,19 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConcesionarioHerramientas
+namespace ConcesionarioHerramientas.Views
 {
-    public partial class frmPorche : Form
+    public partial class frmChevrolet : Form
     {
-        public frmPorche()
+
+        public frmChevrolet()
         {
             InitializeComponent();
-        }
-
-        private void frmPorche_Load(object sender, EventArgs e)
-        {
-            var controller = new MarcasController();
-            controller.CargarAutosPorMarca(this,2);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -30,12 +25,25 @@ namespace ConcesionarioHerramientas
             {
                 string marca = dataGridView1.Rows[e.RowIndex].Cells["Marca"].Value.ToString();
                 string modelo = dataGridView1.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
-                double precio = Convert.ToDouble(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
-                int idAutomovil = 2; // ← aquí deberías tomar el ID real de la fila
+                decimal precio = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
+                int idAutomovil = 3; // ← aquí deberías tomar el ID real de la fila
 
                 var controller = new ClientesController();
                 controller.SeleccionarAutomovil(this, marca, modelo, precio, idAutomovil);
             }
+        }
+
+        private void frmChevrolet_Load(object sender, EventArgs e)
+        {
+
+            var controller = new MarcasController();
+            controller.CargarAutosPorMarca(this, 3);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            var controller = new MarcasController();
+            controller.CerrarFormulario(this);
         }
     }
 }

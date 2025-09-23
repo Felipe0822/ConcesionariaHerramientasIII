@@ -1,7 +1,6 @@
-﻿
-namespace ConcesionarioHerramientas.Views
+﻿namespace ConcesionarioHerramientas.Views
 {
-    partial class frmMazda
+    partial class frmChevrolet
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +35,8 @@ namespace ConcesionarioHerramientas.Views
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Cursor = Cursors.IBeam;
-            dataGridView1.Location = new Point(233, 99);
+            dataGridView1.Location = new Point(240, 112);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(300, 188);
@@ -49,7 +45,7 @@ namespace ConcesionarioHerramientas.Views
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(326, 331);
+            btnSalir.Location = new Point(326, 347);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
             btnSalir.TabIndex = 8;
@@ -57,25 +53,23 @@ namespace ConcesionarioHerramientas.Views
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // frmMazda
+            // frmChevrolet
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
-            Name = "frmMazda";
-            Text = "frmMazda";
-            Load += frmMazda_Load;
+            Name = "frmChevrolet";
+            Text = "frmChevrolet";
+            Load += frmChevrolet_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
-
-
         #endregion
 
-        public DataGridView dataGridView1;
+        private DataGridView dataGridView1;
         private Button btnSalir;
     }
 }

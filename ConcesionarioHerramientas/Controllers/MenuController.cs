@@ -8,7 +8,7 @@ using ConcesionarioHerramientas.Models;
 
 namespace ConcesionarioHerramientas.Controllers
 {
-    class MenuController
+    public class MenuController
     {
 
         public void AbrirFormularioMarcas(frmMenu menu) 

@@ -47,7 +47,25 @@ namespace ConcesionarioHerramientas.Views
         private void btoPorche_Click(object sender, EventArgs e)
         {
             var controllerMarcas = new MarcasController();
-            controllerMarcas.VerPorche(this);
+            controllerMarcas.VerPorsche(this);
+        }
+
+        private void btnChevrolet_Click(object sender, EventArgs e)
+        {
+            var controller = new MarcasController();
+            controller.VerChevrolet(this);
+        }
+
+        private void btnRenault_Click(object sender, EventArgs e)
+        {
+            var controller = new MarcasController();
+            controller.VerRenault(this);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            var controller = new MarcasController();
+            controller.CerrarFormulario(this);
         }
     }
 }

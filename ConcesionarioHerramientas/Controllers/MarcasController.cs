@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ConcesionarioHerramientas.Controllers
 {
-    internal class MarcasController
+    public class MarcasController
     {
 
      
@@ -25,14 +25,35 @@ namespace ConcesionarioHerramientas.Controllers
             frm.Show();
         }
 
-        public void VerPorche(frmMarcas frp)
+        public void VerPorsche(frmMarcas frm)
         {
-            frp.Hide();
-            frmPorche frmPorche = new frmPorche();
+            frm.Hide();
+            frmPorsche frmPorche = new frmPorsche();
             frmPorche.ShowDialog();
-            frp.Show();
+            frm.Show();
         }
-    
+        public void VerRenault(frmMarcas frm)
+        {
+            frm.Hide();
+            frmRenault frmRenault = new frmRenault();
+            frmRenault.ShowDialog();
+            frm.Show();
+        }
+
+        public void VerChevrolet(frmMarcas frm)
+        {
+            frm.Hide();
+            frmChevrolet frmChevrolet = new frmChevrolet();
+            frmChevrolet.ShowDialog();
+            frm.Show();
+        }
+
+        public void CerrarFormulario(Form frm)
+        {
+            frm.Close();
+        }
+
+        
         public void CargarAutosPorMarca(Form frm, int idMarca)
         {
             using (var context = new ConexionDB())
@@ -42,6 +63,7 @@ namespace ConcesionarioHerramientas.Controllers
                     .Where(a => a.IdMarca == idMarca)
                     .Select(a => new
                     {
+                        IdAutomovil = a.IdAutomovil,
                         Marca = a.Marca.NombreMarca,
                         Modelo = a.Modelo,
                         Precio = a.Precio
@@ -56,8 +78,9 @@ namespace ConcesionarioHerramientas.Controllers
                     grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     // Ocultar la columna del ID si no quieres mostrarla
-                    if (grid.Columns["IdAutomovil"] != null)
-                        grid.Columns["IdAutomovil"].Visible = false;
+                    grid.Columns["IdAutomovil"].Visible = false;
+
+
                 }
 
 

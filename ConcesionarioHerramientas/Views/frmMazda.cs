@@ -59,21 +59,23 @@ namespace ConcesionarioHerramientas.Views
         {
             if (e.RowIndex >= 0)
             {
+
+
                 string marca = dataGridView1.Rows[e.RowIndex].Cells["Marca"].Value.ToString();
                 string modelo = dataGridView1.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
-                double precio = Convert.ToDouble(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
-                int idAutomovil = 1; // ← aquí deberías tomar el ID real de la fila
-
+                decimal precio = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells["Precio"].Value);
+                int idAutomovil = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAutomovil"].Value);
                 var controller = new ClientesController();
                 controller.SeleccionarAutomovil(this, marca, modelo, precio, idAutomovil);
             }
 
-          
+
         }
 
-        private void btoComnprar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            var controller = new MarcasController();
+            controller.CerrarFormulario(this);
         }
     }
 }
