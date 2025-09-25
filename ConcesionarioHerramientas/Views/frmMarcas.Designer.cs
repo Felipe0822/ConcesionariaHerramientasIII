@@ -39,6 +39,7 @@
             // 
             // btnMazda
             // 
+            btnMazda.Anchor = AnchorStyles.Top;
             btnMazda.Location = new Point(332, 131);
             btnMazda.Name = "btnMazda";
             btnMazda.Size = new Size(106, 34);
@@ -59,6 +60,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(198, 56);
@@ -70,6 +72,7 @@
             // 
             // btoPorche
             // 
+            btoPorche.Anchor = AnchorStyles.Top;
             btoPorche.Location = new Point(332, 200);
             btoPorche.Name = "btoPorche";
             btoPorche.Size = new Size(106, 34);
@@ -80,6 +83,7 @@
             // 
             // btnChevrolet
             // 
+            btnChevrolet.Anchor = AnchorStyles.Top;
             btnChevrolet.Location = new Point(332, 268);
             btnChevrolet.Name = "btnChevrolet";
             btnChevrolet.Size = new Size(106, 34);
@@ -90,6 +94,7 @@
             // 
             // btnRenault
             // 
+            btnRenault.Anchor = AnchorStyles.Top;
             btnRenault.Location = new Point(332, 342);
             btnRenault.Name = "btnRenault";
             btnRenault.Size = new Size(106, 34);
@@ -100,6 +105,7 @@
             // 
             // btnSalir
             // 
+            btnSalir.Anchor = AnchorStyles.Top;
             btnSalir.Location = new Point(518, 222);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
@@ -122,6 +128,7 @@
             Controls.Add(btnMazda);
             Name = "frmMarcas";
             Text = "Marcas";
+            WindowState = FormWindowState.Maximized;
             Load += frmMarcas_Load;
             ResumeLayout(false);
             PerformLayout();

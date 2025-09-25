@@ -35,6 +35,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(240, 112);
             dataGridView1.Name = "dataGridView1";
@@ -45,7 +46,8 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(326, 347);
+            btnSalir.Anchor = AnchorStyles.Top;
+            btnSalir.Location = new Point(323, 34);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
             btnSalir.TabIndex = 8;
@@ -61,7 +63,8 @@
             Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
             Name = "frmChevrolet";
-            Text = "frmChevrolet";
+            Text = "Chevrolet";
+            WindowState = FormWindowState.Maximized;
             Load += frmChevrolet_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

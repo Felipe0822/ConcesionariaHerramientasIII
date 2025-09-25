@@ -35,6 +35,7 @@
             // 
             // btnSalir
             // 
+            btnSalir.Anchor = AnchorStyles.Top;
             btnSalir.Location = new Point(344, 275);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
@@ -45,6 +46,7 @@
             // 
             // btnVerMarcas
             // 
+            btnVerMarcas.Anchor = AnchorStyles.Top;
             btnVerMarcas.Location = new Point(344, 200);
             btnVerMarcas.Name = "btnVerMarcas";
             btnVerMarcas.Size = new Size(123, 34);
@@ -55,16 +57,18 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
+            label1.BackColor = Color.WhiteSmoke;
             label1.Font = new Font("Segoe UI", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(183, 101);
+            label1.Location = new Point(205, 103);
             label1.Name = "label1";
             label1.Size = new Size(425, 40);
             label1.TabIndex = 2;
             label1.Text = "Bienvenido a la concesionaria";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // Menu
+            // frmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -72,8 +76,9 @@
             Controls.Add(label1);
             Controls.Add(btnVerMarcas);
             Controls.Add(btnSalir);
-            Name = "Menu";
+            Name = "frmMenu";
             Text = "Menú";
+            WindowState = FormWindowState.Maximized;
             Load += Menu_Load;
             ResumeLayout(false);
             PerformLayout();

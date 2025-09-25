@@ -38,6 +38,7 @@ namespace ConcesionarioHerramientas.Views
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Cursor = Cursors.IBeam;
             dataGridView1.Location = new Point(233, 99);
@@ -49,7 +50,8 @@ namespace ConcesionarioHerramientas.Views
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(326, 331);
+            btnSalir.Anchor = AnchorStyles.Top;
+            btnSalir.Location = new Point(325, 37);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
             btnSalir.TabIndex = 8;
@@ -65,7 +67,8 @@ namespace ConcesionarioHerramientas.Views
             Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
             Name = "frmMazda";
-            Text = "frmMazda";
+            Text = "Mazda";
+            WindowState = FormWindowState.Maximized;
             Load += frmMazda_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

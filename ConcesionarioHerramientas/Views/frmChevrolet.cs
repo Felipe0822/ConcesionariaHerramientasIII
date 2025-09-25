@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,15 @@ namespace ConcesionarioHerramientas.Views
 {
     public partial class frmChevrolet : Form
     {
+        [DllImport("gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+    int nLeftRect,     // x-coordinate of upper-left corner
+    int nTopRect,      // y-coordinate of upper-left corner
+    int nRightRect,    // x-coordinate of lower-right corner
+    int nBottomRect,   // y-coordinate of lower-right corner
+    int nWidthEllipse, // width of ellipse
+    int nHeightEllipse // height of ellipse
+     );
 
         public frmChevrolet()
         {
@@ -38,38 +49,45 @@ namespace ConcesionarioHerramientas.Views
 
             var controller = new MarcasController();
             controller.CargarAutosPorMarca(this, 3);
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.EnableHeadersVisualStyles = false;
+          
+            // Ajustar DataGridView
+            dataGridView1.Width = this.ClientSize.Width - 100;
+            dataGridView1.Height = this.ClientSize.Height - 200;
+            dataGridView1.Location = new Point(50, 150);
 
-            // Fondo
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.GridColor = Color.LightGray;
+            dataGridView1.BorderStyle = BorderStyle.None;
 
-            // Cabecera
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            // Filas
+            // Estilo filas
             dataGridView1.DefaultCellStyle.BackColor = Color.White;
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 9);
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
 
-            // Filas alternadas
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-
-            // Ajuste columnas
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.RowHeadersVisible = false;
-
+            btnSalir.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            btnSalir.Size = new Size(160, 45);
+            btnSalir.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSalir.Width, btnSalir.Height, 20, 20));
             btnSalir.BackColor = Color.Firebrick;
             btnSalir.ForeColor = Color.White;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.FlatAppearance.BorderSize = 0;
+            btnSalir.MouseEnter += (s, ev) => btnSalir.BackColor = Color.IndianRed;
+            btnSalir.MouseLeave += (s, ev) => btnSalir.BackColor = Color.Firebrick;
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            // Fondo con degradado más notorio
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.FromArgb(20, 30, 60),   // Azul oscuro
+                                                                       Color.FromArgb(120, 170, 255), // Azul claro
+                                                                       90F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

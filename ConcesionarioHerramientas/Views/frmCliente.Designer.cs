@@ -37,11 +37,13 @@
             btnContinuar = new Button();
             lblAuto = new Label();
             btnSalir = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(326, 54);
+            txtNombre.Anchor = AnchorStyles.Top;
+            txtNombre.Location = new Point(326, 61);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(125, 27);
@@ -50,7 +52,8 @@
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(326, 105);
+            txtApellido.Anchor = AnchorStyles.Top;
+            txtApellido.Location = new Point(326, 115);
             txtApellido.Name = "txtApellido";
             txtApellido.PlaceholderText = "Apellido";
             txtApellido.Size = new Size(125, 27);
@@ -59,6 +62,7 @@
             // 
             // txtCedula
             // 
+            txtCedula.Anchor = AnchorStyles.Top;
             txtCedula.Location = new Point(326, 165);
             txtCedula.Name = "txtCedula";
             txtCedula.PlaceholderText = "Cedula";
@@ -68,6 +72,7 @@
             // 
             // txtDireccion
             // 
+            txtDireccion.Anchor = AnchorStyles.Top;
             txtDireccion.Location = new Point(326, 222);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Dirección";
@@ -77,6 +82,7 @@
             // 
             // txtTelefono
             // 
+            txtTelefono.Anchor = AnchorStyles.Top;
             txtTelefono.Location = new Point(326, 280);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Telefono";
@@ -86,6 +92,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.Top;
             txtEmail.Location = new Point(326, 331);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
@@ -95,6 +102,7 @@
             // 
             // btnContinuar
             // 
+            btnContinuar.Anchor = AnchorStyles.Top;
             btnContinuar.Location = new Point(288, 380);
             btnContinuar.Name = "btnContinuar";
             btnContinuar.Size = new Size(94, 29);
@@ -105,8 +113,9 @@
             // 
             // lblAuto
             // 
+            lblAuto.Anchor = AnchorStyles.Top;
             lblAuto.AutoSize = true;
-            lblAuto.Location = new Point(627, 220);
+            lblAuto.Location = new Point(513, 165);
             lblAuto.Name = "lblAuto";
             lblAuto.Size = new Size(50, 20);
             lblAuto.TabIndex = 7;
@@ -114,6 +123,7 @@
             // 
             // btnSalir
             // 
+            btnSalir.Anchor = AnchorStyles.Top;
             btnSalir.Location = new Point(404, 380);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
@@ -122,11 +132,22 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Location = new Point(513, 118);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Estas comprando:";
+            // 
             // frmCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(btnSalir);
             Controls.Add(lblAuto);
             Controls.Add(btnContinuar);
@@ -137,7 +158,8 @@
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
             Name = "frmCliente";
-            Text = "frmCliente";
+            Text = "Cliente";
+            WindowState = FormWindowState.Maximized;
             Load += frmCliente_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -154,5 +176,6 @@
         private Button btnContinuar;
         private Label lblAuto;
         private Button btnSalir;
+        private Label label1;
     }
 }

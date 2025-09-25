@@ -45,7 +45,7 @@ namespace ConcesionarioHerramientas.Controllers
 
                     idCliente = cliente.IdCliente; // EF devuelve el identity asignado
 
-                    MessageBox.Show("Cliente guardado con Id: " + idCliente);
+                    MessageBox.Show("Cliente guardado");
 
                     // 2. Registrar la venta asociada al cliente y automovil
                     var venta = new Ventas
