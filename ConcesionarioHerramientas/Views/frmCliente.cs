@@ -114,13 +114,16 @@ namespace ConcesionarioHerramientas.Views
         {
             base.OnPaint(e);
 
-            // Fondo con degradado más notorio
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                       Color.FromArgb(20, 30, 60),   // Azul oscuro
-                                                                       Color.FromArgb(120, 170, 255), // Azul claro
-                                                                       90F))
+            // Evitar error si el formulario está minimizado o el rectángulo es inválido
+            if (this.ClientRectangle.Width > 0 && this.ClientRectangle.Height > 0)
             {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                           Color.FromArgb(20, 30, 60),   // Azul oscuro
+                                                                           Color.FromArgb(120, 170, 255), // Azul claro
+                                                                           90F))
+                {
+                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                }
             }
         }
 
@@ -147,13 +150,13 @@ namespace ConcesionarioHerramientas.Views
 
             btnContinuar.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             btnContinuar.Size = new Size(160, 45);
-            btnContinuar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSalir.Width, btnSalir.Height, 20, 20));
-            btnContinuar.BackColor = Color.Firebrick;
+            btnContinuar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnContinuar.Width, btnContinuar.Height, 20, 20));
+            btnContinuar.BackColor = Color.Blue;
             btnContinuar.ForeColor = Color.White;
             btnContinuar.FlatStyle = FlatStyle.Flat;
             btnContinuar.FlatAppearance.BorderSize = 0;
-            btnContinuar.MouseEnter += (s, ev) => btnSalir.BackColor = Color.IndianRed;
-            btnContinuar.MouseLeave += (s, ev) => btnSalir.BackColor = Color.Blue;
+            btnContinuar.MouseEnter += (s, ev) => btnContinuar.BackColor = Color.BlueViolet;
+            btnContinuar.MouseLeave += (s, ev) => btnContinuar.BackColor = Color.Blue;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

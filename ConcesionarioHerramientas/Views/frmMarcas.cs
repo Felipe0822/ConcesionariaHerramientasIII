@@ -43,21 +43,41 @@ namespace ConcesionarioHerramientas.Views
             btnMazda.ForeColor = Color.White;
             btnMazda.FlatStyle = FlatStyle.Flat;
             btnMazda.FlatAppearance.BorderSize = 0;
+            btnMazda.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            btnMazda.Size = new Size(160, 45);
+            btnMazda.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnMazda.Width, btnMazda.Height, 20, 20));
+            btnMazda.MouseEnter += (s, ev) => btnMazda.BackColor = Color.Violet;
+            btnMazda.MouseLeave += (s, ev) => btnMazda.BackColor = Color.BlueViolet;
 
             btoPorche.BackColor = Color.BlueViolet;
             btoPorche.ForeColor = Color.White;
             btoPorche.FlatStyle = FlatStyle.Flat;
             btoPorche.FlatAppearance.BorderSize = 0;
+            btoPorche.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            btoPorche.Size = new Size(160, 45);
+            btoPorche.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btoPorche.Width, btoPorche.Height, 20, 20));
+            btoPorche.MouseEnter += (s, ev) => btoPorche.BackColor = Color.Violet;
+            btoPorche.MouseLeave += (s, ev) => btoPorche.BackColor = Color.BlueViolet;
 
             btnChevrolet.BackColor = Color.BlueViolet;
             btnChevrolet.ForeColor = Color.White;
             btnChevrolet.FlatStyle = FlatStyle.Flat;
             btnChevrolet.FlatAppearance.BorderSize = 0;
+            btnChevrolet.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            btnChevrolet.Size = new Size(160, 45);
+            btnChevrolet.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnChevrolet.Width, btnChevrolet.Height, 20, 20));
+            btnChevrolet.MouseEnter += (s, ev) => btnChevrolet.BackColor = Color.Violet;
+            btnChevrolet.MouseLeave += (s, ev) => btnChevrolet.BackColor = Color.BlueViolet;
 
             btnRenault.BackColor = Color.BlueViolet;
             btnRenault.ForeColor = Color.White;
             btnRenault.FlatStyle = FlatStyle.Flat;
             btnRenault.FlatAppearance.BorderSize = 0;
+            btnRenault.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            btnRenault.Size = new Size(160, 45);
+            btnRenault.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnRenault.Width, btnRenault.Height, 20, 20));
+            btnRenault.MouseEnter += (s, ev) => btnRenault.BackColor = Color.Violet;
+            btnRenault.MouseLeave += (s, ev) => btnRenault.BackColor = Color.BlueViolet;
 
             btnSalir.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             btnSalir.Size = new Size(160, 45);
@@ -75,13 +95,16 @@ namespace ConcesionarioHerramientas.Views
         {
             base.OnPaint(e);
 
-            // Fondo con degradado más notorio
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                       Color.FromArgb(20, 30, 60),   // Azul oscuro
-                                                                       Color.FromArgb(120, 170, 255), // Azul claro
-                                                                       90F))
+            // Evitar error si el formulario está minimizado o el rectángulo es inválido
+            if (this.ClientRectangle.Width > 0 && this.ClientRectangle.Height > 0)
             {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                           Color.FromArgb(20, 30, 60),   // Azul oscuro
+                                                                           Color.FromArgb(120, 170, 255), // Azul claro
+                                                                           90F))
+                {
+                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                }
             }
         }
 

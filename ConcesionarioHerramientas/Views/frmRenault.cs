@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -68,18 +69,22 @@ namespace ConcesionarioHerramientas.Views
             btnSalir.MouseEnter += (s, ev) => btnSalir.BackColor = Color.IndianRed;
             btnSalir.MouseLeave += (s, ev) => btnSalir.BackColor = Color.Firebrick;
         }
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            using (var brush = new System.Drawing.Drawing2D.LinearGradientBrush(
-                this.ClientRectangle,
-                Color.White,         // Arriba
-                Color.SteelBlue,     // Abajo
-                90F))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
+        protected override void OnPaint(PaintEventArgs e)
+{
+    base.OnPaint(e);
 
+    // Evitar error si el formulario está minimizado o el rectángulo es inválido
+    if (this.ClientRectangle.Width > 0 && this.ClientRectangle.Height > 0)
+    {
+        using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                   Color.FromArgb(20, 30, 60),   // Azul oscuro
+                                                                   Color.FromArgb(120, 170, 255), // Azul claro
+                                                                   90F))
+        {
+            e.Graphics.FillRectangle(brush, this.ClientRectangle);
+        }
+    }
+}
         private void btnSalir_Click(object sender, EventArgs e)
         {
             btnSalir.BackColor = Color.DarkRed;

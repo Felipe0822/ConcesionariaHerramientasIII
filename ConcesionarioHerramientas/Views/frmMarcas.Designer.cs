@@ -106,7 +106,7 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Top;
-            btnSalir.Location = new Point(518, 222);
+            btnSalir.Location = new Point(546, 226);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(123, 34);
             btnSalir.TabIndex = 7;

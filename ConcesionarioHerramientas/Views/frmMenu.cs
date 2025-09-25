@@ -54,13 +54,16 @@ namespace ConcesionarioHerramientas
         {
             base.OnPaint(e);
 
-            // Fondo con degradado más notorio
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                       Color.FromArgb(20, 30, 60),   // Azul oscuro
-                                                                       Color.FromArgb(120, 170, 255), // Azul claro
-                                                                       90F))
+            // Evitar error si el formulario está minimizado o el rectángulo es inválido
+            if (this.ClientRectangle.Width > 0 && this.ClientRectangle.Height > 0)
             {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                           Color.FromArgb(20, 30, 60),   // Azul oscuro
+                                                                           Color.FromArgb(120, 170, 255), // Azul claro
+                                                                           90F))
+                {
+                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                }
             }
         }
 

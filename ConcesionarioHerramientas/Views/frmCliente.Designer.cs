@@ -103,7 +103,7 @@
             // btnContinuar
             // 
             btnContinuar.Anchor = AnchorStyles.Top;
-            btnContinuar.Location = new Point(288, 380);
+            btnContinuar.Location = new Point(231, 380);
             btnContinuar.Name = "btnContinuar";
             btnContinuar.Size = new Size(94, 29);
             btnContinuar.TabIndex = 6;
@@ -115,7 +115,7 @@
             // 
             lblAuto.Anchor = AnchorStyles.Top;
             lblAuto.AutoSize = true;
-            lblAuto.Location = new Point(513, 165);
+            lblAuto.Location = new Point(522, 165);
             lblAuto.Name = "lblAuto";
             lblAuto.Size = new Size(50, 20);
             lblAuto.TabIndex = 7;
@@ -124,7 +124,7 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Top;
-            btnSalir.Location = new Point(404, 380);
+            btnSalir.Location = new Point(401, 380);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
             btnSalir.TabIndex = 8;
